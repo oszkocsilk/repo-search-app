@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search App</title>
+    <link rel="stylesheet" href="standard_style.css">
+    <link rel="stylesheet" href="media_style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="burned_data.js"></script>
+    <script src="viewDropdown.js"></script>
+
+</head>
+<body id="body">
+    <header id="menu">
+        <h1>Repo Search App</h1>
+        <a href="#" class="btn active" id="search">Search</a>
+        <a href="history.html" class="btn" id="history">History</a>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">View</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="page1.html" >Page1</a>
+              <a href="page2.html">Page2</a>
+              <a href="#mobilview" id="content-mobile">Mobile</a>
+            </div>
+          </div>
+    </header>
+
+    <div id="filter">
+        <span>Search by:*</span>
+        <input type="text" id="myInput" placeholder="Search for repos.." title="Type something">
+
+        <span id="in_span" >In:</span>
+
+        <input class="checkbox" type="checkbox" id="name_ckbox" name="name" checked>
+        <label for="name">name</label>
+
+        <input class="checkbox" type="checkbox" id="desc_ckbox" name="description">
+        <label for="description">description</label>
+
+        <input class="checkbox" type="checkbox" id="readme_ckbox" name="readme">
+        <label for="readme">readme</label>
+
+        <button onclick="searchStart()" id="search_btn">Search</button>
+        <button onclick="reset()" id="reset_btn">Reset</button>
+    </div>
+
+    <div class="searchlist">
+        <h1 id="emptySearch">Search results are coming here</h1>
+        <div id="sorting">
+            <div id="sort_by">
+                <span>Sort by: </span>
+                <input onclick="chose_orderby()" type="radio" name="sortBy" id="def_sort" checked>
+                <label for="sortBy">default</label>
+
+                <input onclick="chose_orderby()" type="radio" name="sortBy" id="star_sort">
+                <label for="sortBy">stars</label>
+
+                <input onclick="chose_orderby()" type="radio" name="sortBy" id="forks_sort">
+                <label for="sortBy">forks</label>
+
+            </div>
+            <div id="order_by">
+                <span>Order by: </span>
+                <input onclick="chose_orderby()" type="radio" name="orderBy" id="desc_order" checked>
+                <label for="orderBy">desc</label>
+
+                <input onclick="chose_orderby()" type="radio" name="orderBy" id="asc_order">
+                <label for="orderBy">asc</label>
+
+            </div>
+            <div class="totalResult">Total results: <span id="totalResults"></span> </div>
+        </div>
+        <div id="searchList"></div>
+        <div id="pagination">
+            Current page: <span id="page"></span> / <span id="Maxpage"></span>
+            <a href="javascript:prevPage()" id="btn_prev">Prev</a>
+            <a href="javascript:nextPage()" id="btn_next">Next</a>
+        </div>
+    </div>
+
+
+    <script>
+        var header = document.getElementById("menu");
+        var btns = header.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+          });
+        }
+    </script>
+
+</body>
+</html>
