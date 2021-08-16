@@ -1,5 +1,5 @@
-const repos= new Array();
-        for(let i=0; i<20; i++){
+var repos= new Array();
+        for(var i=0; i<20; i++){
             repos[i] = new Array("Name"+i, "5","5","5","5", "Repo description text here...", "2019.01.20.","2021.05.24.","John Doe", "JavaScript", "Repo Full name");
         }
         repos[20] = new Array("20.repo name", "4","5","5","3", "Repo description text here...", "2019.01.20.","2021.05.24.","John Doe", "JavaScript", "Repo Full name");
@@ -11,17 +11,18 @@ const repos= new Array();
         repos[26] = new Array("_Repo name", "5","4","5","2", "Repo description text here...", "2019.01.20.","2021.05.24.","John Doe", "CSS", "Repo Full name");
         repos[27] = new Array("repo", "3","4","7","1", "Repo description text here...", "2019.01.20.","2021.05.24.","John Doe", "HTML", "Repo Full name");
         repos[28] = new Array("repo name new", "3","8","1","0", "Repo description text here...", "2019.01.20.","2021.05.24.","John Doe", "JavaScript", "Repo Full");
-        repos[29] = new Array("REpo name", "3","9","1","0", "Repo description text here...", "2019.01.20.","2021.05.24.","John Doe", "CSS", "Full name");
+        repos[29] = new Array("REpo name", "3","9","1","0", "Repo description text here...", "2019.01.20.","2021.05.24.","John Doe", "CSS", "Fulll name");
 
-    let current_page = 1;
-    const records_per_page = 10;
+    var current_page = 1;
+    var records_per_page = 10;
 
 
-    function prevPage(){
-        if (current_page > 1) {
-            current_page--;
-            changePage(current_page);
-        }
+    function prevPage()
+{
+    if (current_page > 1) {
+        current_page--;
+        changePage(current_page);
+    }
 }
 
 function nextPage()
@@ -48,10 +49,10 @@ resultRepos =[];
 }
 
 function checkBoxCounter(){
-    let inputList = document.getElementsByClassName("checkbox");
-    let numChecked = 0;
+    var inputList =document.getElementsByClassName("checkbox");
+    var numChecked = 0;
 
-        for (let i = 0; i < inputList.length; i++) {
+        for (var i = 0; i < inputList.length; i++) {
             if (inputList[i].type == "checkbox" && inputList[i].checked) {
                 numChecked = numChecked + 1;
             }
@@ -78,13 +79,60 @@ var resultRepos=new Array();
 
 function select_values(input){
     resultRepos =[];
-    for(let i=0; i<repos.length; i++){
+    for(var i=0; i<repos.length; i++){
+
+        if(document.getElementById("name_ckbox").checked){
 
 
-        if(repos[i][0].toUpperCase().includes(input.toUpperCase())){
+            if(repos[i][0].toUpperCase().includes(input.toUpperCase())){
 
-            resultRepos.push(repos[i]);
+                resultRepos.push(repos[i]);
 
+            }
+            else if(document.getElementById("desc_ckbox").checked){
+
+                if(repos[i][5].toUpperCase().includes(input.toUpperCase())){
+
+                    resultRepos.push(repos[i]);
+
+                }
+            }
+            else if(document.getElementById("readme_ckbox").checked){
+
+
+                if(repos[i][8].toUpperCase().includes(input.toUpperCase())){
+
+                    resultRepos.push(repos[i]);
+
+                }
+            }
+        }
+
+        else if(document.getElementById("desc_ckbox").checked){
+
+            if(repos[i][5].toUpperCase().includes(input.toUpperCase())){
+
+                resultRepos.push(repos[i]);
+
+            }
+        }
+        else if(document.getElementById("readme_ckbox").checked){
+
+
+            if(repos[i][10].toUpperCase().includes(input.toUpperCase())){
+
+                resultRepos.push(repos[i]);
+
+            }
+        }
+        else if(document.getElementById("readme_ckbox").checked){
+
+
+            if(repos[i][10].toUpperCase().includes(input.toUpperCase())){
+
+                resultRepos.push(repos[i]);
+
+            }
         }
         
     }
@@ -95,12 +143,12 @@ function select_values(input){
 function changePage(page)
 {   
 
-    let btn_next = document.getElementById("btn_next");
-    let btn_prev = document.getElementById("btn_prev");
-    let listing_table = document.getElementById("searchList");
-    let page_span = document.getElementById("page");
-    let Maxpage_span= document.getElementById("Maxpage");
-    let TotalResults =document.getElementById("totalResults");
+    var btn_next = document.getElementById("btn_next");
+    var btn_prev = document.getElementById("btn_prev");
+    var listing_table = document.getElementById("searchList");
+    var page_span = document.getElementById("page");
+    var Maxpage_span= document.getElementById("Maxpage");
+    var TotalResults =document.getElementById("totalResults");
 
     TotalResults.innerHTML=resultRepos.length;
     
@@ -110,8 +158,8 @@ function changePage(page)
 
     listing_table.innerHTML = "";
 
-    for (let i = (page-1) * records_per_page; i < (page * records_per_page); i++) {
-        let html = [
+    for (var i = (page-1) * records_per_page; i < (page * records_per_page); i++) {
+        var html = [
             '<table id="mainTable" style="undefined;table-layout: fixed; width: auto">',
                 '<colgroup>',
                     '<col >',
@@ -215,10 +263,10 @@ window.onload = function() {
 
 function chose_orderby(){
 
-    let desc_order = document.getElementById("desc_order").checked;
+    var desc_order = document.getElementById("desc_order").checked;
 
-    let def_sort = document.getElementById("def_sort").checked;
-    let star_sort = document.getElementById("star_sort").checked;
+    var def_sort = document.getElementById("def_sort").checked;
+    var star_sort = document.getElementById("star_sort").checked;
 
 
     if(desc_order){
