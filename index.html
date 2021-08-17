@@ -5,16 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search App</title>
-    <link rel="stylesheet" href="blue_style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media_style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="burned_data.js"></script>
     <script src="viewDropdown.js"></script>
 
 </head>
-<body id="body">
+<body id="body" class="standard">
     <header id="menu">
-        <h1>Repo Search App</h1>
+        <h1 id="theme">Repo Search App</h1>
         <a href="#" class="btn active" id="search">Search</a>
         <a href="history.html" class="btn" id="history">History</a>
         <div class="dropdown">
@@ -90,6 +90,28 @@
           current[0].className = current[0].className.replace(" active", "");
           this.className += " active";
           });
+        }
+    </script>
+    <script>
+        let body=document.getElementById("body");
+        let btn=document.getElementById("theme");
+        btn.addEventListener("click",themeChange);
+        function themeChange(){
+                if(body.classList=='standard'){
+                    body.classList.replace('standard','pinky');
+                }
+                else if(body.classList=='pinky'){
+                    body.classList.replace('pinky','brown');
+                }
+                else if(body.classList=='brown'){
+                    body.classList.replace('brown','blue');
+                }
+                else if(body.classList=='blue'){
+                    body.classList.replace('blue','standard');
+                }
+
+
+            
         }
     </script>
 
