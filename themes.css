@@ -1,0 +1,120 @@
+:root {
+    --primary-light: #8abdff;
+    --primary: #000000;
+    --primary-dark: #000000;
+    
+    --white: #FFFFFF;
+    --greyLight-1: #E4EBF5;
+    --greyLight-2: #c8d0e7;
+    --greyLight-3: #bec8e4;
+    --greyDark: #9baacf;
+    --blue:rgba(14,111,235,1);
+    --black: #000;
+  
+    --background: lightgray;
+    --navbar: var(--black);
+    --logo: var(--white);
+    --navbar-links: var(--white);
+    --dropdn-bg: var(--white);
+    --dropdn-txt: var(--black);
+    --dropdn-hover: var(--blue);
+    --header-hover: var(--blue);
+    --header-hover-txt:var(--white);
+    --filter-bg: var(--white);
+    --filter-txt: var(--black);
+    --filter-btn-bg: var(--black);
+    --filter-btn-txt: var(--white);
+    --filter-btn-hover: var(--blue);
+    --filter-btn-hover-txt: var(--white);
+    --search-list-bg: var(--white);
+    --search-list-txt: var(--black);
+    --list-odd: rgb(235, 235, 235);
+    --list-even: rgb(240, 240, 240);
+    
+  
+  
+    --shadow: .4rem .4rem .7rem var(--greyDark), 
+    -.3rem -.3rem .6rem var(--white);
+    --inner-shadow: inset .2rem .2rem .5rem var(--greyLight-2), 
+    inset -.1rem -.1rem .3rem var(--white);
+  }
+  .pinky{
+    --background: #fad4b7;
+    --navbar: rgb(236, 168, 115);
+    --logo: #a5645c;
+    --navbar-links: #a5645c;
+    --dropdn-bg: rgb(236, 168, 115);
+    --dropdn-txt: var(--black);
+    --dropdn-hover: #a5645c;
+    --header-hover: #a5645c;
+    --header-hover-txt:var(--white);
+    --filter-bg: rgb(236, 168, 115);
+    --filter-txt: black;
+    --filter-btn-bg: #a5645c;
+    --filter-btn-txt: white;
+    --filter-btn-hover: #c96553;
+    --filter-btn-hover-txt: black;
+    --search-list-bg: rgb(236, 168, 115);
+    --search-list-txt: black;
+    --list-odd: #c96553;
+    --list-even: #a5645c;
+  
+    --shadow: .4rem .4rem .7rem #c96553, 
+              -.3rem -.3rem .6rem #f2bd94;
+    --inner-shadow: inset .2rem .2rem .5rem #a5645c, 
+                    inset -.1rem -.1rem .3rem #c96553;
+  }
+  .brown{
+  
+    --background: rgb(54, 36, 18);
+    --navbar: #3f260d;
+    --logo: #b98655;
+    --navbar-links: rgb(255, 120, 1);
+    --dropdn-bg: #b98655;
+    --dropdn-txt: var(--black);
+    --dropdn-hover: rgb(255, 120, 1);
+    --header-hover: rgb(255, 120, 1);
+    --header-hover-txt:var(--white);
+    --filter-bg: #b98655;
+    --filter-txt: black;
+    --filter-btn-bg: #3f260d;
+    --filter-btn-txt: white;
+    --filter-btn-hover: #9f5510;
+    --filter-btn-hover-txt: black;
+    --search-list-bg: #b98655;
+    --search-list-txt: black;
+    --list-odd: #9f5510;
+    --list-even: rgb(255, 120, 1);
+  
+    --shadow: .4rem .4rem .7rem #9f5510, 
+              -.3rem -.3rem .6rem #b98655;
+    --inner-shadow: inset .2rem .2rem .5rem rgb(255, 120, 1), 
+                    inset -.1rem -.1rem .3rem #9f5510;
+  }
+  
+  .blue{
+
+    --primary-light: #8abdff;
+    --primary: #6d5dfc;
+    --primary-dark: #5b0eeb;
+  
+    --background: linear-gradient(90deg, rgba(14,111,235,0.4) 0%, rgba(22,254,255,0.4) 100%);
+    --navbar: linear-gradient(270deg, rgba(14,111,235,1) 0%, rgba(22,254,255,1) 100%);
+    --logo: rgb(21, 30, 153);
+    --navbar-links: white;
+    --dropdn-bg: var(--greyLight-1);
+    --dropdn-txt: #5b0eeb;
+    --dropdn-hover: rgba(22,254,255);
+    --header-hover: #5b0eeb;
+    --header-hover-txt: #5b0eeb;
+    --filter-bg: linear-gradient(270deg, rgba(14,111,235,0.6) 0%, rgba(22,254,255,0.6) 100%);
+    --filter-txt: #5b0eeb;
+    --filter-btn-bg: #5b0eeb;
+    --filter-btn-txt: white;
+    --filter-btn-hover: rgba(22,254,255);
+    --filter-btn-hover-txt: #6d5dfc;
+    --search-list-bg: rgb(248, 251, 255);
+    --search-list-txt: black;
+    --list-odd: rgb(0, 255, 255,0.1);
+    --list-even: rgba(8, 200, 255, 0.2);
+  }
