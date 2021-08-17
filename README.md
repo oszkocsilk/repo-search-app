@@ -6,6 +6,8 @@ With the Reset button, the default values came back.
 You can sort and order those values.
 You can navigate by pagination.
 
+To test the search, type "name" or "repo" for name search.
+
 There are some placeholders, to show they are work well.(History page, Page 1, Page 2 and mobie view)
 There is link in view, what you can see only in mobile view. 
 
